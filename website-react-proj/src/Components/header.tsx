@@ -1,6 +1,10 @@
 import viteLogo from "/vite.svg";
+import { useState } from "react";
 
 function header() {
+  const menuItem = ["Home", "Profile", "Feature", "Pricing"];
+  const [currentMenuIdx, setMenuIdx] = useState(0);
+
   return (
     <>
       <header className="p-3 text-bg-dark">
@@ -22,37 +26,22 @@ function header() {
             </a>
 
             <ul className="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li className="nav-item">
-                <a
-                  href="#"
-                  className="nav-link active"
-                  onClick={() => {
-                    console.log("Clicked home!");
-                  }}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link px-2 text-white">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link px-2 text-white">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link px-2 text-white">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="nav-link px-2 text-white">
-                  About
-                </a>
-              </li>
+              {menuItem.map((item, index) => (
+                <li className="nav-item">
+                  <a
+                    href="#"
+                    className={
+                      currentMenuIdx === index ? "nav-link active" : "nav-link"
+                    }
+                    onClick={() => {
+                      setMenuIdx(index);
+                      console.log("Clicked home! " + { currentMenuIdx });
+                    }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
             <form
               className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"

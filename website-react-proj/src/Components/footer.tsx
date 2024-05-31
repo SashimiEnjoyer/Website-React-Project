@@ -2,11 +2,12 @@ import viteLogo from "/vite.svg";
 
 function footer() {
   return (
-    <div className="container  p-3 mb-2 bg-dark text-white">
+    <div className="container p-3 bg-dark text-white">
       <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top ">
-        <div className="col mb-3 align-self-center">
+        <div className="col align-self-center">
           <a
             href="https://facebook.com "
+            target="_blank"
             className="d-flex justify-content-center mb-3 link-body-emphasis text-decoration-none"
           >
             <img
