@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Header from "./Components/header.tsx";
 import Footer from "./Components/footer.tsx";
+import Carousel from "./Components/carousel.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Header />
+      <Carousel />
       <div className="container">
         <div className="d-flex justify-content-center p-2">
           <a href="https://vitejs.dev" target="_blank">

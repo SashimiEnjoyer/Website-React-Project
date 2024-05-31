@@ -7,7 +7,7 @@ function header() {
 
   return (
     <>
-      <header className="p-3 text-bg-dark">
+      <header className="p-5 text-bg-dark">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a
@@ -25,7 +25,7 @@ function header() {
               />
             </a>
 
-            <ul className="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <ul className="nav nav-pills me-lg-auto justify-content-center">
               {menuItem.map((item, index) => (
                 <li className="nav-item">
                   <a
