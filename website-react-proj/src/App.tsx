@@ -4,6 +4,8 @@ import viteLogo from "/vite.svg";
 import Header from "./Components/header.tsx";
 import Footer from "./Components/footer.tsx";
 import Carousel from "./Components/carousel.tsx";
+import SimpleBody from "./Components/simpleBody.tsx";
+import BootstrapCarousel from "./Components/bootstrapCarousel.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,7 +14,9 @@ function App() {
     <>
       <Header />
       <Carousel />
-      <div className="container">
+      <BootstrapCarousel />
+      <SimpleBody />
+      <div className="container px-4 py-5 mb-5 border">
         <div className="d-flex justify-content-center p-2">
           <a href="https://vitejs.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />

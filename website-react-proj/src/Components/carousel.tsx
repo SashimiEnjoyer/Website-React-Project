@@ -11,11 +11,7 @@ function carousel() {
   const [itemIdx, setItemIdx] = useState(0);
 
   return (
-    <div
-      id="myCarousel"
-      className="carousel slide mb-6"
-      data-bs-ride="carousel"
-    >
+    <div className="carousel slide mb-6">
       <div className="carousel-indicators">
         <button
           type="button"
