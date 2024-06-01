@@ -1,9 +1,11 @@
+import viteLogo from "/vite.svg";
+
 function simpleBody() {
   return (
     <div className="px-4 py-5 my-5 text-center border">
       <img
         className="d-block mx-auto mb-4"
-        src="/docs/5.3/assets/brand/bootstrap-logo.svg"
+        src={viteLogo}
         alt=""
         width="72"
         height="57"
