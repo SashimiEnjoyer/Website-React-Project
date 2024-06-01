@@ -39,7 +39,7 @@ function App() {
           <p className="d-flex justify-content-center m-2"> count is {count}</p>
         </div>
         <p className="text-center">
-          Click on the Vite and React logos to learn more
+          Click on the Vite and React logos to learn more!
         </p>
       </div>
       <Footer />

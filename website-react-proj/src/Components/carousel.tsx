@@ -1,4 +1,15 @@
+import { useState } from "react";
+import CarouselItem from "./carouselItem";
+
 function carousel() {
+  let itemlist: { description: string; buttonText: string }[] = [
+    { description: "Description 1", buttonText: "Button 1" },
+    { description: "Description 2", buttonText: "Button 2" },
+    { description: "Description 3", buttonText: "Button 3" },
+  ];
+
+  const [itemIdx, setItemIdx] = useState(0);
+
   return (
     <div
       id="myCarousel"
@@ -10,7 +21,7 @@ function carousel() {
           type="button"
           data-bs-target="#myCarousel"
           data-bs-slide-to="0"
-          className=""
+          className={itemIdx != 0 ? "" : "active"}
           aria-label="Slide 1"
         ></button>
         <button
@@ -18,117 +29,36 @@ function carousel() {
           data-bs-target="#myCarousel"
           data-bs-slide-to="1"
           aria-label="Slide 2"
-          className=""
+          className={itemIdx != 1 ? "" : "active"}
         ></button>
         <button
           type="button"
           data-bs-target="#myCarousel"
           data-bs-slide-to="2"
           aria-label="Slide 3"
-          className="active"
+          className={itemIdx != 2 ? "" : "active"}
           aria-current="true"
         ></button>
       </div>
       <div className="carousel-inner">
-        <div className="carousel-item">
-          <svg
-            className="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            ></rect>
-          </svg>
-          <div className="container">
-            <div className="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p className="opacity-75">
-                Some representative placeholder content for the first slide of
-                the carousel.
-              </p>
-              <p>
-                <a className="btn btn-lg btn-primary" href="#">
-                  Sign up today
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <svg
-            className="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            ></rect>
-          </svg>
-          <div className="container">
-            <div className="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>
-                Some representative placeholder content for the second slide of
-                the carousel.
-              </p>
-              <p>
-                <a className="btn btn-lg btn-primary" href="#">
-                  Learn more
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item active">
-          <svg
-            className="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            ></rect>
-          </svg>
-          <div className="container">
-            <div className="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>
-                Some representative placeholder content for the third slide of
-                this carousel.
-              </p>
-              <p>
-                <a className="btn btn-lg btn-primary" href="#">
-                  Browse gallery
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+        {itemlist.map((item, index) => (
+          <CarouselItem
+            description={item.description}
+            buttonText={item.buttonText}
+            isActive={itemIdx === index}
+          />
+        ))}
       </div>
       <button
         className="carousel-control-prev"
         type="button"
         data-bs-target="#myCarousel"
         data-bs-slide="prev"
+        onClick={() =>
+          setItemIdx((itemIdx) =>
+            itemIdx < 1 ? itemlist.length - 1 : itemIdx - 1
+          )
+        }
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
@@ -138,6 +68,7 @@ function carousel() {
         type="button"
         data-bs-target="#myCarousel"
         data-bs-slide="next"
+        onClick={() => setItemIdx((itemIdx) => (itemIdx + 1) % itemlist.length)}
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
