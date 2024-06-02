@@ -7,7 +7,7 @@ function header() {
 
   return (
     <>
-      <header className="p-5 text-bg-dark border">
+      <header className="p-4 text-bg-dark border-bottom">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a

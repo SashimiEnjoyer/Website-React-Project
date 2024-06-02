@@ -3,7 +3,7 @@ import viteLogo from "/vite.svg";
 function footer() {
   return (
     <div className="bg-dark text-white">
-      <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 px-3 py-5 border ">
+      <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 px-3 py-5">
         <div className="col align-self-center">
           <a
             href="https://facebook.com "
@@ -24,8 +24,53 @@ function footer() {
             PT. Maju Bersama © 2024 All Rights Reserved
           </p>
         </div>
-
-        <div className="col mb-3"></div>
+        <div className="col mb-3" />
+        <div className="col mb-3">
+          <ul className="nav flex-column">
+            <li className="nav-item mb-4">
+              <h5>Address</h5>
+              <p className="p-0 m-0 fw-light">
+                Jl. Menuju Surga Kav.999, Kota Sigma, Jawa Utara, 009988
+              </p>
+            </li>
+            <li className="nav-item mb-2">
+              <h5>Contact Person</h5>
+              <p className="p-0 m-0 fw-light">
+                Sigma Mewing Gyatt: (+22) 0088-9928-9403
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className="col mb-3">
+          <h5>Section</h5>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-primary">
+                Home
+              </a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-primary">
+                Features
+              </a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-primary">
+                Pricing
+              </a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-primary">
+                FAQs
+              </a>
+            </li>
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-primary">
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <div className="col mb-3">
           <h5>Our Social Media</h5>
@@ -35,85 +80,23 @@ function footer() {
                 Home
               </a>
             </li>
-            <li className="nav-item mb-2 ">
-              <a href="#" className="nav-link p-0 text-body-secondary">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link p-0 text-body-primary">
                 Features
               </a>
             </li>
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
+              <a href="#" className="nav-link p-0 text-body-primary">
                 Pricing
               </a>
             </li>
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
+              <a href="#" className="nav-link p-0 text-body-primary">
                 FAQs
               </a>
             </li>
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="col mb-3">
-          <h5>Section</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Features
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                FAQs
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="col mb-3">
-          <h5>Section</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Features
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                FAQs
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
+              <a href="#" className="nav-link p-0 text-body-primary">
                 About
               </a>
             </li>
