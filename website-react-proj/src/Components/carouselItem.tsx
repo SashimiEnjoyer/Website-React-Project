@@ -8,11 +8,7 @@ interface Props {
 
 function carouselItem({ description, buttonText, isActive }: Props) {
   return (
-    <div
-      className={
-        isActive ? "bg-dark carousel-item active" : "bg-dark carousel-item"
-      }
-    >
+    <div className={isActive ? "carousel-item active" : "carousel-item"}>
       <img
         className="w-100 d-flex justify-content-center"
         src={reactLogo}
